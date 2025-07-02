@@ -11,6 +11,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
     environment:
       - DISPLAY=${DISPLAY}
+      - QODO_API_KEY=${QODO_API_KEY}
     command: sleep infinity
     # adjust these things
     # network_mode: service:redis
