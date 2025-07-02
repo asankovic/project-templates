@@ -1,0 +1,4 @@
+echo 'Starting Qodo Merge auto diff review...' > diff_review_post_commit.md
+echo 'Starting Qodo Merge auto diff review...' >&2
+
+bash -c "qodo --ci diff_review_post_commit > diff_review_post_commit_log.txt 2>&1 &"

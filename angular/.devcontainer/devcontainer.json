@@ -1,0 +1,23 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "Angular Dev Container",
+  "dockerComposeFile": "compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--name",
+    "angular_example-devcontainer"
+  ],
+  "forwardPorts": [
+    4200
+  ],
+  "postCreateCommand": "npm -g i @qodo/command",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/angular-cli:2": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}

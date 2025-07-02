@@ -1,0 +1,24 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+{
+  "name": "Node.js & TypeScript Dev Container",
+  "dockerComposeFile": "compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--name",
+    "node_example-devcontainer"
+  ],
+  "forwardPorts": [
+    8080,
+    6379
+  ],
+  "postCreateCommand": "npm -g i @qodo/command && npm i",
+  "features": {
+    "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": []
+    }
+  }
+}

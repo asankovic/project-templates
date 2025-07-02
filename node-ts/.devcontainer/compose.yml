@@ -1,0 +1,23 @@
+services:
+  devcontainer:
+    container_name: node_example
+    build:
+      context: .
+      dockerfile: Containerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - ~/.config/nvim:/home/node/.config/nvim
+    #clipboard
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: sleep infinity
+    # adjust these things
+    # network_mode: service:redis
+
+  # adjust these things
+  # redis:
+  #   container_name: redis_example
+  #   image: redis:latest
+  #   ports:
+  #     - "6379:6379"

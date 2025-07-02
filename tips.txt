@@ -1,0 +1,4 @@
+1. Run this to figure out the nvim config path
+  devcontainer exec --workspace-folder . nvim --headless -c 'echo stdpath("config") | q'
+2. For clipboard, should also run this
+ xhost +local:docker
