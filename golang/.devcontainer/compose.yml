@@ -1,0 +1,16 @@
+services:
+  devcontainer:
+    container_name: go_example
+    build:
+      context: .
+      dockerfile: Containerfile
+    volumes:
+      - ../..:/workspaces:cached
+      - ~/.config/nvim:/home/vscode/.config/nvim
+    #clipboard
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+    command: sleep infinity
+    ports:
+    - "8080:8080"

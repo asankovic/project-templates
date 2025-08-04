@@ -1,0 +1,17 @@
+{
+  "name": "Go Devcontainer",
+  "dockerComposeFile": "compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runArgs": [
+    "--name",
+    "golang_example-devcontainer"
+  ],
+  "forwardPorts": [
+    8080
+  ],
+  "features": {
+    "ghcr.io/devcontainers-extra/features/neovim-homebrew:1": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  }
+}
